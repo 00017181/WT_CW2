@@ -1,0 +1,29 @@
+extends layout.pug 
+
+block content 
+    .container 
+        h1 Add new student 
+
+        form.form(action="/create", method='POST')
+            label Student name
+            input.input(type="text" name ='title')
+
+            label Student information 
+            textarea.input(type="text" name='description') 
+
+            button.button Add 
+            
+        if error
+            p.error  Error! Enter information!
+
+        if error_title 
+            p.error_title Add student name first!
+
+        if error_description
+            p.error_description Add student information!
+       
+        if success 
+            p.success Student is added! 
+
+        if deleted 
+            p.deleted Student record has been deleted!

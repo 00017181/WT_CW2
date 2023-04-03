@@ -1,0 +1,13 @@
+extends layout.pug 
+block content 
+
+
+    .container 
+      h1 All Students 
+
+      each student in students 
+         .student_wrapper
+            a.student(href=`/all/${ student.id }`) #{ student.title }
+            .manage_buttons       
+                a.delete(href=`/all/${ student.id }/delete`) delete  
+                a.archive(href=`/all/${ student.id }/archive`) archive  

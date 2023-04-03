@@ -1,0 +1,11 @@
+extends layout.pug 
+block content 
+
+
+    .container 
+      h1 Archive 
+
+      each student in students 
+         .student_wrapper
+             a.student(href=`/all/${ student.id }`) #{ student.title }   
+             a.unarchive(href=`/all/${ student.id }/unarchive`) Unarchive  

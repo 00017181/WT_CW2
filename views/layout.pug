@@ -1,0 +1,17 @@
+doctype html
+html(lang="en")
+    head
+        title Students app
+        link(rel='stylesheet' href='/static/main.css')
+    
+    body 
+        header.navbar 
+            h1 
+              a(href='/') Student database App
+
+            nav.nav 
+                a(href='/all') All Students 
+                a(href='/create') Create
+                a(href="/archive") Archive   
+
+    block content              

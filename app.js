@@ -53,18 +53,6 @@ app.post('/create',(req,res)=> {
     }  
 })
 
-
-app.get('api/v1/all', (req, res) => {
-    fs.readFile('./data/all.json', (err, data) => { 
-        if (err) throw err
-    
-        const students = JSON.parse(data)
-            
-        res.json(students)
-    })
-})
-
-
 // deleting record
  
 app.get('/all/:id/delete', (req, res) => {
